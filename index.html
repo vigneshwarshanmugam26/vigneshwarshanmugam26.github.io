@@ -1,359 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section id="projects" class="projects">
 
-    <title>Vigneshwar Shanmugam | Aspiring Data Analyst</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #111827;
-            color: #F9FAFB;
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        nav {
-            height: 70px;
-            background: #1F2937;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            color: #F9FAFB;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #3B82F6;
-        }
-
-        /* Hero */
-        .hero {
-            min-height: 650px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px 8%;
-            gap: 50px;
-        }
-
-        .hero-text {
-            max-width: 650px;
-        }
-
-        .hero-text .small-title {
-            color: #3B82F6;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-size: 58px;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #3B82F6;
-        }
-
-        .hero h2 {
-            font-size: 26px;
-            color: #9CA3AF;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            color: #D1D5DB;
-            font-size: 17px;
-            max-width: 600px;
-            margin-bottom: 30px;
-        }
-
-        /* Buttons */
-        .buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn {
-            padding: 13px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        .primary {
-            background: #3B82F6;
-            color: white;
-        }
-
-        .secondary {
-            border: 1px solid #3B82F6;
-            color: #3B82F6;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Featured Project */
-        .section {
-            padding: 80px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #9CA3AF;
-            margin-bottom: 45px;
-        }
-
-        .project-card {
-            background: #1F2937;
-            border-radius: 12px;
-            overflow: hidden;
-            max-width: 1100px;
-            margin: auto;
-            border: 1px solid #374151;
-        }
-
-        .project-image {
-            width: 100%;
-            display: block;
-        }
-
-        .project-content {
-            padding: 30px;
-        }
-
-        .project-content h3 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .project-content p {
-            color: #D1D5DB;
-            margin-bottom: 20px;
-        }
-
-        /* Skills */
-        .skills {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .skill {
-            background: #1F2937;
-            border: 1px solid #374151;
-            padding: 12px 22px;
-            border-radius: 6px;
-            color: #D1D5DB;
-        }
-
-        /* Footer */
-        footer {
-            background: #1F2937;
-            text-align: center;
-            padding: 25px;
-            color: #9CA3AF;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 60px;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .buttons {
-                justify-content: center;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Vigneshwar Shanmugam</div>
-
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-
-        <div class="hero-text">
-
-            <div class="small-title">ASPIRING DATA ANALYST</div>
-
-            <h1>
-                Turning Data Into
-                <span>Business Insights</span>
-            </h1>
-
-            <h2>Power BI • SQL • Excel</h2>
-
-            <p>
-                I transform raw data into meaningful insights through
-                interactive dashboards, analytical thinking, and
-                data-driven storytelling.
-            </p>
-
-            <div class="buttons">
-                <a href="#projects" class="btn primary">
-                    View My Projects
-                </a>
-
-                <a href="#contact" class="btn secondary">
-                    Contact Me
-                </a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Featured Project -->
-    <section class="section" id="projects">
-
-        <h2 class="section-title">
-            Featured Project
-        </h2>
-
-        <p class="section-subtitle">
-            My flagship Power BI analytics project
+    <div class="section-title">
+        <span>PORTFOLIO</span>
+        <h2>Featured Projects</h2>
+        <p>
+            Data analytics projects focused on business insights,
+            visualization, and data-driven decision making.
         </p>
+    </div>
 
-        <div class="project-card">
+    <!-- PROJECT 1 — FEATURED -->
+    <div class="featured-project">
 
+        <div class="project-image">
             <img
                 src="https://raw.githubusercontent.com/vigneshwarshanmugam26/supply-chain-control-tower-powerbi/main/01-executive-overview.png.png"
-                alt="Supply Chain Control Tower Dashboard"
-                class="project-image"
-            >
+                alt="Supply Chain Control Tower Dashboard">
+        </div>
 
-            <div class="project-content">
+        <div class="project-content">
 
-                <h3>
-                    🚚 Supply Chain Control Tower Dashboard
-                </h3>
+            <span class="project-label">FEATURED PROJECT</span>
 
-                <p>
-                    An advanced Power BI solution designed to monitor
-                    sales, profitability, customer behavior, shipping
-                    performance, delivery efficiency, and operational risks.
-                </p>
+            <h3>Supply Chain Control Tower Dashboard</h3>
 
+            <p>
+                An advanced Power BI analytics solution designed to monitor
+                supply chain performance, sales, profitability, customer
+                behavior, shipping efficiency, delivery performance,
+                and operational risks.
+            </p>
+
+            <div class="tech-stack">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Power Query</span>
+                <span>Data Modeling</span>
+            </div>
+
+            <div class="project-stats">
+                <div>
+                    <strong>180K+</strong>
+                    <small>Records</small>
+                </div>
+
+                <div>
+                    <strong>65K+</strong>
+                    <small>Orders</small>
+                </div>
+
+                <div>
+                    <strong>6</strong>
+                    <small>Pages</small>
+                </div>
+            </div>
+
+            <div class="project-buttons">
                 <a
                     href="https://github.com/vigneshwarshanmugam26/supply-chain-control-tower-powerbi"
                     target="_blank"
-                    class="btn primary"
-                >
-                    View Project →
+                    class="btn primary">
+                    View on GitHub
                 </a>
-
             </div>
 
         </div>
+    </div>
 
-    </section>
 
-    <!-- Skills -->
-    <section class="section" id="skills">
+    <!-- PROJECTS 2–5 -->
 
-        <h2 class="section-title">
-            Skills & Tools
-        </h2>
+    <div class="project-grid">
 
-        <p class="section-subtitle">
-            Technologies I use for data analysis and business intelligence
-        </p>
+        <!-- PROJECT 2 -->
+        <div class="project-card">
 
-        <div class="skills">
+            <div class="project-card-number">02</div>
 
-            <div class="skill">Power BI</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Excel</div>
-            <div class="skill">DAX</div>
-            <div class="skill">Power Query</div>
-            <div class="skill">Data Modeling</div>
+            <h3>Customer 360 Analytics Dashboard</h3>
+
+            <p>
+                Interactive Power BI dashboard analyzing customer behavior,
+                purchasing patterns, sales contribution, segmentation,
+                and geographic performance.
+            </p>
+
+            <div class="card-tags">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Power Query</span>
+            </div>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
 
         </div>
 
-    </section>
 
-    <!-- Contact -->
-    <section class="section" id="contact">
+        <!-- PROJECT 3 -->
+        <div class="project-card">
 
-        <h2 class="section-title">
-            Let's Connect
-        </h2>
+            <div class="project-card-number">03</div>
 
-        <p class="section-subtitle">
-            I'm open to Data Analyst opportunities and professional connections.
-        </p>
+            <h3>Executive Sales Analytics Dashboard</h3>
 
-    </section>
+            <p>
+                Executive Power BI dashboard analyzing sales performance,
+                product trends, customer contribution, and regional
+                performance from 2011–2014.
+            </p>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Vigneshwar Shanmugam • Aspiring Data Analyst
-    </footer>
+            <div class="card-tags">
+                <span>Power BI</span>
+                <span>DAX</span>
+                <span>Data Modeling</span>
+            </div>
 
-</body>
-</html>
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+        <div class="project-card">
+
+            <div class="project-card-number">04</div>
+
+            <h3>SQL Data Cleaning & Exploratory Analysis</h3>
+
+            <p>
+                SQL project focused on cleaning World Layoffs data,
+                exploratory analysis, ranking, trend analysis,
+                and extracting business insights.
+            </p>
+
+            <div class="card-tags">
+                <span>SQL</span>
+                <span>MySQL</span>
+                <span>EDA</span>
+            </div>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+
+        <!-- PROJECT 5 -->
+        <div class="project-card">
+
+            <div class="project-card-number">05</div>
+
+            <h3>HR Analytics Dashboard</h3>
+
+            <p>
+                Excel-based workforce analytics dashboard covering
+                employee performance, salary, experience, workforce
+                distribution, and active employee trends.
+            </p>
+
+            <div class="card-tags">
+                <span>Excel</span>
+                <span>Pivot Tables</span>
+                <span>Dashboard</span>
+            </div>
+
+            <a href="#" class="project-link">
+                View Project →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
