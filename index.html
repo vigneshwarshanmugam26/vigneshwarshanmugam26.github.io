@@ -1,112 +1,1055 @@
-```html
-<!-- Hero Section -->
-<section class="hero" id="home">
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="hero-text">
+<head>
 
-        <div class="hero-status">
-            <span class="status-dot"></span>
-            AVAILABLE FOR DATA ANALYST OPPORTUNITIES
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vigneshwar Shanmugam | Data Analyst</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111827;
+            color: #F9FAFB;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            height: 70px;
+            background: #1F2937;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            border-bottom: 1px solid #374151;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #F9FAFB;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #3B82F6;
+        }
+
+
+        /* =========================
+           HERO / HOME
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px 8%;
+
+            background: #111827;
+        }
+
+        .hero-text {
+            max-width: 760px;
+        }
+
+        .small-title {
+            color: #3B82F6;
+            font-size: 17px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #3B82F6;
+        }
+
+        .hero h2 {
+            font-size: 26px;
+            color: #9CA3AF;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #D1D5DB;
+            font-size: 17px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #3B82F6;
+            color: white;
+        }
+
+        .secondary {
+            border: 1px solid #3B82F6;
+            color: #3B82F6;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        .section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #9CA3AF;
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-container {
+            max-width: 950px;
+            margin: auto;
+
+            background: #1F2937;
+
+            border: 1px solid #374151;
+            border-radius: 12px;
+
+            padding: 35px;
+        }
+
+        .about-container p {
+            color: #D1D5DB;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+        .about-container p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #1F2937;
+
+            border: 1px solid #374151;
+
+            padding: 12px 22px;
+
+            border-radius: 6px;
+
+            color: #D1D5DB;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #3B82F6;
+            color: #3B82F6;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #1F2937;
+
+            border: 1px solid #374151;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #3B82F6;
+        }
+
+        .project-card.featured {
+            grid-column: span 2;
+        }
+
+        .project-image {
+            width: 100%;
+            display: block;
+
+            border-bottom: 1px solid #374151;
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-number {
+            color: #3B82F6;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .project-content h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .project-content p {
+            color: #D1D5DB;
+            margin-bottom: 18px;
+            font-size: 15px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            margin-bottom: 20px;
+        }
+
+        .project-tech span {
+            background: #111827;
+            border: 1px solid #374151;
+
+            color: #9CA3AF;
+
+            padding: 5px 10px;
+
+            border-radius: 4px;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESUME
+        ========================= */
+
+        .resume-section {
+            text-align: center;
+        }
+
+        .resume-box {
+            max-width: 750px;
+            margin: auto;
+
+            background: #1F2937;
+
+            border: 1px solid #374151;
+            border-radius: 12px;
+
+            padding: 40px;
+        }
+
+        .resume-box h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .resume-box p {
+            color: #9CA3AF;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-container {
+            max-width: 900px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: #1F2937;
+
+            border: 1px solid #374151;
+
+            border-radius: 10px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: #3B82F6;
+        }
+
+        .contact-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: #9CA3AF;
+            text-decoration: none;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        .contact-card a:hover {
+            color: #3B82F6;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #1F2937;
+
+            text-align: center;
+
+            padding: 25px;
+
+            color: #9CA3AF;
+
+            border-top: 1px solid #374151;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: span 1;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 600px;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero-text {
+                max-width: 700px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .section {
+                padding: 65px 6%;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="logo">
+            Vigneshwar Shanmugam
         </div>
 
-        <div class="small-title">
-            ASPIRING DATA ANALYST
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#resume">Resume</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <div class="small-title">
+                ASPIRING DATA ANALYST
+            </div>
+
+            <h1>
+                Turning Data Into
+                <span>Business Insights</span>
+            </h1>
+
+            <h2>
+                Power BI • SQL • Excel
+            </h2>
+
+            <p>
+                I transform raw data into meaningful business insights
+                through interactive dashboards, data analysis,
+                analytical thinking, and data-driven storytelling.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Let's Connect
+                </a>
+
+            </div>
+
         </div>
 
-        <h1>
-            Turning Data Into
-            <span>Business Insights</span>
-        </h1>
+    </section>
 
-        <h2>
-            Power BI • SQL • Excel
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="section" id="about">
+
+        <h2 class="section-title">
+            About Me
         </h2>
 
-        <p>
-            I transform raw data into meaningful business insights
-            through data cleaning, analytical thinking, interactive
-            dashboards, and data-driven storytelling.
+        <p class="section-subtitle">
+            Aspiring Data Analyst focused on turning data into actionable insights
         </p>
 
-        <div class="buttons">
 
-            <a href="#projects" class="btn primary">
-                View My Projects
+        <div class="about-container">
+
+            <p>
+                I am an aspiring Data Analyst with hands-on experience
+                in Power BI, SQL, Excel, DAX, Power Query, and data modeling.
+            </p>
+
+            <p>
+                I enjoy working with raw and complex datasets, cleaning
+                and transforming data, building analytical models, and
+                creating interactive dashboards that help businesses
+                understand performance and make better decisions.
+            </p>
+
+            <p>
+                My portfolio includes projects covering supply chain,
+                customer analytics, executive sales analysis, SQL data
+                cleaning and exploratory analysis, and HR analytics.
+            </p>
+
+            <p>
+                I am currently seeking opportunities where I can apply
+                my analytical skills, continue learning, and contribute
+                to data-driven business decisions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section class="section" id="skills">
+
+        <h2 class="section-title">
+            Skills & Tools
+        </h2>
+
+        <p class="section-subtitle">
+            Technologies I use for data analysis and business intelligence
+        </p>
+
+
+        <div class="skills">
+
+            <div class="skill">Power BI</div>
+
+            <div class="skill">SQL</div>
+
+            <div class="skill">Microsoft Excel</div>
+
+            <div class="skill">DAX</div>
+
+            <div class="skill">Power Query</div>
+
+            <div class="skill">Data Modeling</div>
+
+            <div class="skill">Data Cleaning</div>
+
+            <div class="skill">Exploratory Data Analysis</div>
+
+            <div class="skill">Business Analysis</div>
+
+            <div class="skill">Data Visualization</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section class="section" id="projects">
+
+        <h2 class="section-title">
+            Projects
+        </h2>
+
+        <p class="section-subtitle">
+            Selected data analytics and business intelligence projects
+        </p>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card featured">
+
+                <img
+                    src="https://raw.githubusercontent.com/vigneshwarshanmugam26/supply-chain-control-tower-powerbi/main/01-executive-overview.png.png"
+                    alt="Supply Chain Control Tower Dashboard"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 01 • FLAGSHIP
+                    </div>
+
+                    <h3>
+                        Supply Chain Control Tower Dashboard
+                    </h3>
+
+                    <p>
+                        Advanced Power BI dashboard designed to monitor
+                        sales, profitability, customer behavior, shipping
+                        performance, delivery efficiency, and operational risks.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Power Query</span>
+                        <span>Star Schema</span>
+                        <span>Data Modeling</span>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/vigneshwarshanmugam26/supply-chain-control-tower-powerbi"
+                        target="_blank"
+                        class="btn primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <img
+                    src="https://raw.githubusercontent.com/vigneshwarshanmugam26/customer-360-analytics-powerbi/main/01-executive-overview.png"
+                    alt="Customer 360 Analytics Dashboard"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        Customer 360 Analytics Dashboard
+                    </h3>
+
+                    <p>
+                        Interactive Power BI dashboard analyzing customer
+                        behavior, sales contribution, segmentation,
+                        purchasing patterns, and geographic performance.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Customer Analytics</span>
+                        <span>Segmentation</span>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/vigneshwarshanmugam26/customer-360-analytics-powerbi"
+                        target="_blank"
+                        class="btn primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <img
+                    src="https://raw.githubusercontent.com/vigneshwarshanmugam26/executive-sales-analytics-powerbi/main/01-executive-overview%20(2).png"
+                    alt="Executive Sales Analytics Dashboard"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        Executive Sales Analytics Dashboard
+                    </h3>
+
+                    <p>
+                        Executive Power BI dashboard analyzing sales
+                        performance, product trends, customer contribution,
+                        and regional performance from 2011–2014.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Power BI</span>
+                        <span>DAX</span>
+                        <span>Sales Analytics</span>
+                        <span>Executive Reporting</span>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/vigneshwarshanmugam26/executive-sales-analytics-powerbi"
+                        target="_blank"
+                        class="btn primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card">
+
+                <img
+                    src="https://raw.githubusercontent.com/vigneshwarshanmugam26/world-layoffs-sql-data-analysis/main/03-exploratory-analysis.png"
+                    alt="World Layoffs SQL Analysis"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        SQL Data Cleaning & Exploratory Analysis – World Layoffs
+                    </h3>
+
+                    <p>
+                        SQL data cleaning and exploratory analysis project
+                        uncovering global layoff trends across companies,
+                        industries, countries, funding stages, and time periods.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>MySQL</span>
+                        <span>SQL</span>
+                        <span>Data Cleaning</span>
+                        <span>EDA</span>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/vigneshwarshanmugam26/world-layoffs-sql-data-analysis"
+                        target="_blank"
+                        class="btn primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 5 -->
+
+            <div class="project-card">
+
+                <img
+                    src="https://raw.githubusercontent.com/vigneshwarshanmugam26/hr-analytics-dashboard-excel/main/01-hr-analytics-dashboard.png"
+                    alt="HR Analytics Dashboard"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <div class="project-number">
+                        PROJECT 05
+                    </div>
+
+                    <h3>
+                        HR Analytics Dashboard – Employee Performance & Workforce Insights
+                    </h3>
+
+                    <p>
+                        Excel-based HR analytics dashboard analyzing workforce
+                        composition, employee performance, compensation,
+                        experience, activity, and employee demographics.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Excel</span>
+                        <span>Data Analysis</span>
+                        <span>Pivot Tables</span>
+                        <span>HR Analytics</span>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/vigneshwarshanmugam26/hr-analytics-dashboard-excel"
+                        target="_blank"
+                        class="btn primary"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESUME
+    ========================= -->
+
+    <section class="section resume-section" id="resume">
+
+        <h2 class="section-title">
+            Resume
+        </h2>
+
+        <p class="section-subtitle">
+            Explore my professional background and data analytics experience
+        </p>
+
+
+        <div class="resume-box">
+
+            <h3>
+                Vigneshwar Shanmugam
+            </h3>
+
+            <p>
+                Aspiring Data Analyst | Power BI | SQL | Excel
+            </p>
+
+            <!-- Replace resume.pdf with your actual resume file -->
+
+            <a
+                href="resume.pdf"
+                target="_blank"
+                class="btn primary"
+            >
+                View Resume →
             </a>
 
-            <a href="#contact" class="btn secondary">
-                Let's Connect
-            </a>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="section" id="contact">
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+        <p class="section-subtitle">
+            I'm open to Data Analyst opportunities and professional connections.
+        </p>
+
+
+        <div class="contact-container">
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Email
+                </h3>
+
+                <a href="mailto:vigneshwarshanmugam26@gmail.com">
+                    vigneshwarshanmugam26@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    LinkedIn
+                </h3>
+
+                <a
+                    href="https://www.linkedin.com/in/vigneshwar-shanmugam-b9b804222"
+                    target="_blank"
+                >
+                    LinkedIn Profile
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    GitHub
+                </h3>
+
+                <a
+                    href="https://github.com/vigneshwarshanmugam26"
+                    target="_blank"
+                >
+                    github.com/vigneshwarshanmugam26
+                </a>
+
+            </div>
+
 
         </div>
 
-        <div class="hero-tools">
-            <span>Power BI</span>
-            <span>SQL</span>
-            <span>Excel</span>
-            <span>DAX</span>
-        </div>
-
-    </div>
+    </section>
 
 
-    <!-- Analytics Visual -->
-    <div class="hero-visual">
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
-        <div class="analytics-card">
+    <footer>
 
-            <div class="analytics-header">
+        © 2026 Vigneshwar Shanmugam • Aspiring Data Analyst
 
-                <div>
-                    <small>DATA ANALYTICS</small>
-                    <h3>Business Performance</h3>
-                </div>
+    </footer>
 
-                <div class="analytics-icon">
-                    ↗
-                </div>
 
-            </div>
+</body>
 
-            <div class="analytics-value">
-                <strong>+24.8%</strong>
-                <span>Performance</span>
-            </div>
-
-            <div class="chart">
-
-                <div class="bar bar-1"></div>
-                <div class="bar bar-2"></div>
-                <div class="bar bar-3"></div>
-                <div class="bar bar-4"></div>
-                <div class="bar bar-5"></div>
-                <div class="bar bar-6"></div>
-                <div class="bar bar-7"></div>
-
-            </div>
-
-            <div class="analytics-footer">
-
-                <div>
-                    <small>SALES</small>
-                    <strong>36.78M</strong>
-                </div>
-
-                <div>
-                    <small>ORDERS</small>
-                    <strong>65K+</strong>
-                </div>
-
-                <div>
-                    <small>CUSTOMERS</small>
-                    <strong>20K+</strong>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-```
+</html>
