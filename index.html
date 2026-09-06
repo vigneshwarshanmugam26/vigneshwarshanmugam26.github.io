@@ -1,117 +1,233 @@
-```html
-<!-- Hero Section -->
-<section class="hero" id="home">
+```css
+/* Hero Status */
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #9CA3AF;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin-bottom: 18px;
+}
 
-    <div class="hero-text">
-
-        <div class="hero-status">
-            <span class="status-dot"></span>
-            AVAILABLE FOR DATA ANALYST OPPORTUNITIES
-        </div>
-
-        <div class="small-title">
-            ASPIRING DATA ANALYST
-        </div>
-
-        <h1>
-            Turning Data Into
-            <span>Business Insights</span>
-        </h1>
-
-        <h2>
-            Power BI • SQL • Excel
-        </h2>
-
-        <p>
-            I transform raw data into meaningful business insights
-            through data cleaning, analytical thinking, interactive
-            dashboards, and data-driven storytelling.
-        </p>
-
-        <div class="buttons">
-
-            <a href="#projects" class="btn primary">
-                View My Projects
-            </a>
-
-            <a href="#contact" class="btn secondary">
-                Let's Connect
-            </a>
-
-        </div>
-
-        <div class="hero-tools">
-
-            <span>Power BI</span>
-            <span>SQL</span>
-            <span>Excel</span>
-            <span>DAX</span>
-
-        </div>
-
-    </div>
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22C55E;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
 
 
-    <!-- Analytics Visual -->
-    <div class="hero-visual">
+/* Hero Tools */
+.hero-tools {
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
 
-        <div class="analytics-card">
-
-            <div class="analytics-header">
-
-                <div>
-                    <small>DATA ANALYTICS</small>
-                    <h3>Business Performance</h3>
-                </div>
-
-                <div class="analytics-icon">
-                    ↗
-                </div>
-
-            </div>
-
-
-            <div class="analytics-value">
-                <strong>+24.8%</strong>
-                <span>Performance</span>
-            </div>
+.hero-tools span {
+    background: #1F2937;
+    border: 1px solid #374151;
+    color: #9CA3AF;
+    padding: 7px 13px;
+    border-radius: 5px;
+    font-size: 12px;
+}
 
 
-            <div class="chart">
+/* Hero Visual */
+.hero-visual {
+    width: 430px;
+    flex-shrink: 0;
+}
 
-                <div class="bar bar-1"></div>
-                <div class="bar bar-2"></div>
-                <div class="bar bar-3"></div>
-                <div class="bar bar-4"></div>
-                <div class="bar bar-5"></div>
-                <div class="bar bar-6"></div>
-                <div class="bar bar-7"></div>
-
-            </div>
+.analytics-card {
+    background: #1F2937;
+    border: 1px solid #374151;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
 
 
-            <div class="analytics-footer">
+/* Analytics Header */
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
 
-                <div>
-                    <small>SALES</small>
-                    <strong>36.78M</strong>
-                </div>
+.analytics-header small {
+    color: #9CA3AF;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
 
-                <div>
-                    <small>ORDERS</small>
-                    <strong>65K+</strong>
-                </div>
+.analytics-header h3 {
+    font-size: 18px;
+    margin-top: 5px;
+}
 
-                <div>
-                    <small>CUSTOMERS</small>
-                    <strong>20K+</strong>
-                </div>
+.analytics-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: #111827;
+    border: 1px solid #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3B82F6;
+    font-size: 20px;
+}
 
-            </div>
 
-        </div>
+/* Analytics Value */
+.analytics-value {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 22px;
+}
 
-    </div>
+.analytics-value strong {
+    font-size: 32px;
+    color: #3B82F6;
+}
 
-</section>
+.analytics-value span {
+    color: #9CA3AF;
+    font-size: 13px;
+}
+
+
+/* Chart */
+.chart {
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #374151;
+}
+
+.bar {
+    width: 32px;
+    background: #3B82F6;
+    border-radius: 4px 4px 0 0;
+    opacity: 0.9;
+}
+
+.bar-1 {
+    height: 45%;
+}
+
+.bar-2 {
+    height: 60%;
+}
+
+.bar-3 {
+    height: 52%;
+}
+
+.bar-4 {
+    height: 72%;
+}
+
+.bar-5 {
+    height: 65%;
+}
+
+.bar-6 {
+    height: 84%;
+}
+
+.bar-7 {
+    height: 96%;
+}
+
+
+/* Analytics Footer */
+.analytics-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 24px;
+}
+
+.analytics-footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+.analytics-footer small {
+    color: #6B7280;
+    font-size: 9px;
+    margin-bottom: 3px;
+}
+
+.analytics-footer strong {
+    font-size: 14px;
+    color: #F9FAFB;
+}
+
+
+/* Hero Responsive */
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 700px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-tools {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 430px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .hero-visual {
+        max-width: 380px;
+    }
+
+    .analytics-card {
+        padding: 22px;
+    }
+
+    .chart {
+        gap: 8px;
+    }
+
+    .bar {
+        width: 25px;
+    }
+
+}
 ```
